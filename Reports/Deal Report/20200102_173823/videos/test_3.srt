@@ -1,0 +1,120 @@
+1
+00:00:03,236 --> 00:00:03,238
+1. callTestCase(findTestCase("User Login/ValidLogin"), [:], STOP_ON_FAILURE)
+
+2
+00:00:03,438 --> 00:00:03,438
+1. openBrowser("")
+
+3
+00:00:14,902 --> 00:00:14,903
+5. navigateToUrl("https://dev01.farrms.us/trmtracker_release/trmclient/")
+
+4
+00:00:21,632 --> 00:00:21,636
+9. title = getWindowTitle()
+
+5
+00:00:21,856 --> 00:00:21,857
+13. title1 = "TRMTracker: Login"
+
+6
+00:00:21,859 --> 00:00:21,860
+17. if (title.equals(title1))
+
+7
+00:00:21,863 --> 00:00:21,864
+1. comment("Title Matched")
+
+8
+00:00:21,873 --> 00:00:21,874
+21. setText(findTestObject("Page_TRMTracker Login/input_User Name_txt_user_name"), "ronish")
+
+9
+00:00:24,758 --> 00:00:24,759
+25. setText(findTestObject("Page_TRMTracker Login/input_Password_txt_password"), "Kathmandu123")
+
+10
+00:00:27,305 --> 00:00:27,307
+29. click(findTestObject("Page_TRMTracker Login/button_Login"))
+
+11
+00:00:28,867 --> 00:00:28,868
+5. switchToWindowTitle("TRMTracker")
+
+12
+00:01:12,395 --> 00:01:12,395
+9. navigateToUrl("https://dev01.farrms.us/trmtracker_release/trm/main.menu/scripts/main.menu.trm.php")
+
+13
+00:01:14,795 --> 00:01:14,797
+13. maximizeWindow()
+
+14
+00:01:15,981 --> 00:01:15,982
+17. click(findTestObject("Object Repository/Page_TRMTracker/i_Toggle navigation_fa fa-bars"))
+
+15
+00:01:17,334 --> 00:01:17,337
+21. click(findTestObject("Object Repository/Page_TRMTracker/span_Administration"))
+
+16
+00:01:18,450 --> 00:01:18,452
+25. waitForElementVisible(findTestObject("Page_TRMTracker/span_Reporting"), 30)
+
+17
+00:01:20,019 --> 00:01:20,021
+29. click(findTestObject("Object Repository/Page_TRMTracker/span_Reporting"))
+
+18
+00:01:20,323 --> 00:01:20,324
+33. waitForElementVisible(findTestObject("Page_TRMTracker/span_View Report"), 30)
+
+19
+00:01:21,038 --> 00:01:21,040
+37. click(findTestObject("Object Repository/Page_TRMTracker/span_View Report"))
+
+20
+00:01:22,171 --> 00:01:22,172
+41. driver = getWebDriver()
+
+21
+00:01:22,185 --> 00:01:22,188
+45. actions = new org.openqa.selenium.interactions.Actions(driver)
+
+22
+00:01:22,193 --> 00:01:22,196
+49. js = driver
+
+23
+00:01:22,201 --> 00:01:22,202
+53. wait = new org.openqa.selenium.support.ui.WebDriverWait(driver, 30)
+
+24
+00:01:22,205 --> 00:01:22,208
+57. xpathframe = driver.findElement(By.xpath("//div[@class='dhx_cell_cont_wins']//iframe"))
+
+25
+00:01:22,274 --> 00:01:22,276
+61. switchTo().frame(xpathframe)
+
+26
+00:01:22,444 --> 00:01:22,446
+65. delay(5)
+
+27
+00:01:27,610 --> 00:01:27,611
+69. target = driver.findElement(By.xpath("//span[contains(text(),'Deal')]"))
+
+28
+00:01:27,776 --> 00:01:27,776
+73. js.executeScript("arguments[0].scrollIntoView();", target)
+
+29
+00:01:27,832 --> 00:01:27,833
+77. doubleClick(target).perform()
+
+30
+00:01:28,206 --> 00:01:28,208
+81. DailyReport = driver.findElement(By.xpath("//span[contains(text(),'Deal Extract Report')]"))
+

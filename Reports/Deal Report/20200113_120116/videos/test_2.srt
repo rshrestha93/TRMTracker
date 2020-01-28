@@ -1,0 +1,232 @@
+1
+00:00:00,631 --> 00:00:00,633
+1. callTestCase(findTestCase("User Login/ValidLogin"), [:], STOP_ON_FAILURE)
+
+2
+00:00:00,711 --> 00:00:00,712
+1. openBrowser("")
+
+3
+00:00:04,322 --> 00:00:04,323
+5. navigateToUrl("https://dev01.farrms.us/trmtracker_release/trmclient/")
+
+4
+00:00:06,274 --> 00:00:06,274
+9. title = getWindowTitle()
+
+5
+00:00:06,294 --> 00:00:06,295
+13. title1 = "TRMTracker: Login"
+
+6
+00:00:06,303 --> 00:00:06,304
+17. if (title.equals(title1))
+
+7
+00:00:06,307 --> 00:00:06,308
+1. comment("Title Matched")
+
+8
+00:00:06,312 --> 00:00:06,312
+21. setText(findTestObject("Page_TRMTracker Login/input_User Name_txt_user_name"), "ronish")
+
+9
+00:00:06,601 --> 00:00:06,602
+25. setText(findTestObject("Page_TRMTracker Login/input_Password_txt_password"), "Kathmandu123")
+
+10
+00:00:06,885 --> 00:00:06,886
+29. click(findTestObject("Page_TRMTracker Login/button_Login"))
+
+11
+00:00:07,243 --> 00:00:07,244
+5. switchToWindowTitle("TRMTracker")
+
+12
+00:00:14,404 --> 00:00:14,405
+9. navigateToUrl("https://dev01.farrms.us/trmtracker_release/trm/main.menu/scripts/main.menu.trm.php")
+
+13
+00:00:15,509 --> 00:00:15,510
+13. maximizeWindow()
+
+14
+00:00:16,655 --> 00:00:16,656
+17. click(findTestObject("Object Repository/Page_TRMTracker/i_Toggle navigation_fa fa-bars"))
+
+15
+00:00:16,781 --> 00:00:16,782
+21. click(findTestObject("Object Repository/Page_TRMTracker/span_Administration"))
+
+16
+00:00:17,018 --> 00:00:17,020
+25. waitForElementVisible(findTestObject("Page_TRMTracker/span_Reporting"), 30)
+
+17
+00:00:17,674 --> 00:00:17,675
+29. click(findTestObject("Object Repository/Page_TRMTracker/span_Reporting"))
+
+18
+00:00:17,752 --> 00:00:17,753
+33. waitForElementVisible(findTestObject("Page_TRMTracker/span_View Report"), 30)
+
+19
+00:00:18,350 --> 00:00:18,351
+37. click(findTestObject("Object Repository/Page_TRMTracker/span_View Report"))
+
+20
+00:00:18,525 --> 00:00:18,526
+41. driver = getWebDriver()
+
+21
+00:00:18,528 --> 00:00:18,529
+45. actions = new org.openqa.selenium.interactions.Actions(driver)
+
+22
+00:00:18,532 --> 00:00:18,532
+49. js = driver
+
+23
+00:00:18,534 --> 00:00:18,535
+53. wait = new org.openqa.selenium.support.ui.WebDriverWait(driver, 30)
+
+24
+00:00:18,537 --> 00:00:18,538
+57. xpathframe = driver.findElement(By.xpath("//div[@class='dhx_cell_cont_wins']//iframe"))
+
+25
+00:00:18,786 --> 00:00:18,787
+61. switchTo().frame(xpathframe)
+
+26
+00:00:19,024 --> 00:00:19,025
+65. wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Deal')]")))
+
+27
+00:00:20,281 --> 00:00:20,282
+69. Deal = driver.findElement(By.xpath("//span[contains(text(),'Deal')]"))
+
+28
+00:00:20,345 --> 00:00:20,346
+73. js.executeScript("arguments[0].scrollIntoView();", Deal)
+
+29
+00:00:20,377 --> 00:00:20,378
+77. doubleClick(Deal).perform()
+
+30
+00:00:20,622 --> 00:00:20,622
+81. Report = driver.findElement(By.xpath("//span[contains(text(),'Deal Audit Trail Detail Report')]"))
+
+31
+00:00:20,656 --> 00:00:20,657
+85. js.executeScript("arguments[0].scrollIntoView();", Report)
+
+32
+00:00:20,670 --> 00:00:20,671
+89. doubleClick(Report).perform()
+
+33
+00:00:20,896 --> 00:00:20,897
+93. frame2 = driver.findElement(By.xpath("//div[@class='dhx_cell_cont_layout']//iframe"))
+
+34
+00:00:20,936 --> 00:00:20,938
+97. switchTo().frame(frame2)
+
+35
+00:00:21,009 --> 00:00:21,012
+101. frame3 = driver.findElement(By.xpath("//div[@class='dhx_cell_cont_layout']//iframe"))
+
+36
+00:00:21,038 --> 00:00:21,039
+105. switchTo().frame(frame3)
+
+37
+00:00:22,166 --> 00:00:22,167
+109. wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='dhxform_item_label_top browse_label']//label[contains(text(),'Book Structure')]//ancestor::div[1]//following-sibling::div/input")))
+
+38
+00:00:22,252 --> 00:00:22,254
+113. BookStructure = driver.findElement(By.xpath("//div[@class='dhxform_item_label_top browse_label']//label[contains(text(),'Book Structure')]//ancestor::div[1]//following-sibling::div/input"))
+
+39
+00:00:22,287 --> 00:00:22,288
+117. doubleClick(BookStructure).perform()
+
+40
+00:00:22,632 --> 00:00:22,633
+121. xpathframe4 = driver.findElement(By.xpath("//div[contains(@class,'dhx_cell_cont_wins')]//iframe"))
+
+41
+00:00:22,663 --> 00:00:22,665
+125. switchTo().frame(xpathframe4)
+
+42
+00:00:22,703 --> 00:00:22,704
+129. wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body[contains(@class,'dhxlayout_base_dhx_web dhxwins_vp_dhx_web')]/div[contains(@class,'dhxlayout_cont')]/div[contains(@class,'dhx_cell_layout')]/div[contains(@class,'dhx_cell_cont_layout')]/div[contains(@class,'dhxtree_dhx_web')]/div[contains(@class,'containerTableStyle')]/table/tbody/tr/td/table/tbody/tr/td[2]/div[1]")))
+
+43
+00:00:26,242 --> 00:00:26,243
+133. checkbox = driver.findElement(By.xpath("//body[contains(@class,'dhxlayout_base_dhx_web dhxwins_vp_dhx_web')]/div[contains(@class,'dhxlayout_cont')]/div[contains(@class,'dhx_cell_layout')]/div[contains(@class,'dhx_cell_cont_layout')]/div[contains(@class,'dhxtree_dhx_web')]/div[contains(@class,'containerTableStyle')]/table/tbody/tr/td/table/tbody/tr/td[2]/div[1]"))
+
+44
+00:00:26,296 --> 00:00:26,297
+137. click(checkbox).perform()
+
+45
+00:00:26,942 --> 00:00:26,945
+141. OKButton = driver.findElement(By.xpath("//body[contains(@class,'dhxlayout_base_dhx_web dhxwins_vp_dhx_web')]/div[@class='dhxlayout_cont']/div[@class='dhx_cell_layout']/div[@class='dhx_cell_toolbar_def']/div[@class='dhx_toolbar_dhx_web dhxtoolbar_icons_18']/div[@class='dhxtoolbar_float_left']/div[@class='dhx_toolbar_btn dhxtoolbar_btn_def']/div[1]"))
+
+46
+00:00:27,025 --> 00:00:27,027
+145. click(OKButton).perform()
+
+47
+00:00:27,417 --> 00:00:27,418
+149. switchTo().parentFrame()
+
+48
+00:00:27,444 --> 00:00:27,445
+153. Updatedatefrom = driver.findElement(By.xpath("//label[contains(text(),'Updated Date From')]//ancestor::div[1]//following-sibling::div[1]/input"))
+
+49
+00:00:27,470 --> 00:00:27,471
+157. Updatedatefrom.sendKeys("12/31/2017")
+
+50
+00:00:27,730 --> 00:00:27,731
+161. Updatedateto = driver.findElement(By.xpath("//label[contains(text(),'Updated Date To')]//ancestor::div[1]//following-sibling::div[1]/input"))
+
+51
+00:00:27,766 --> 00:00:27,767
+165. Updatedateto.sendKeys("12/31/2017")
+
+52
+00:00:28,021 --> 00:00:28,022
+169. DealID = driver.findElement(By.xpath("//label[contains(text(),'Deal ID')]//ancestor::div[1]//following-sibling::div[1]/input"))
+
+53
+00:00:28,047 --> 00:00:28,048
+173. DealID.sendKeys("225549")
+
+54
+00:00:28,216 --> 00:00:28,217
+177. switchTo().parentFrame()
+
+55
+00:00:28,227 --> 00:00:28,228
+181. Html = xpath("//div[(@title = 'HTML')]")).click()
+
+56
+00:00:28,423 --> 00:00:28,425
+185. frame4 = driver.findElement(By.xpath("//div[contains(@class,'dhxlayout_base_dhx_web')]//div[contains(@class,'dhxlayout_base_dhx_web')]//div[@class='dhx_cell_layout']//iframe"))
+
+57
+00:00:28,452 --> 00:00:28,453
+189. switchTo().frame(frame4)
+
+58
+00:00:28,502 --> 00:00:28,503
+193. wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@class='a117']")))
+

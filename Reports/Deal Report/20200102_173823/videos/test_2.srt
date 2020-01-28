@@ -1,0 +1,8 @@
+1
+00:00:03,436 --> 00:00:03,450
+1. callTestCase(findTestCase("User Login/ValidLogin"), [:], STOP_ON_FAILURE)
+
+2
+00:00:03,672 --> 00:00:03,673
+1. openBrowser("")
+

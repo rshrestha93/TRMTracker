@@ -1,0 +1,16 @@
+1
+00:00:00,727 --> 00:00:00,730
+1. callTestCase(findTestCase("User Login/ValidLogin"), [:], STOP_ON_FAILURE)
+
+2
+00:00:00,857 --> 00:00:00,857
+1. openBrowser("")
+
+3
+00:00:04,386 --> 00:00:04,387
+5. navigateToUrl("https://dev01.farrms.us/trmtracker_release/trmclient/")
+
+4
+00:00:05,618 --> 00:00:05,619
+9. title = getWindowTitle()
+
