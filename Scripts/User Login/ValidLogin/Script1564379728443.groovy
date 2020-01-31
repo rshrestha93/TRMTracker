@@ -36,3 +36,4 @@ WebUI.setText(findTestObject('Page_TRMTracker Login/input_Password_txt_password'
 //WebUI.waitForElementClickable(findTestObject('Page_TRMTracker Login/button_Login'), 5)
 WebUI.click(findTestObject('Page_TRMTracker Login/button_Login'))
 
+WebUI.switchToWindowTitle('TRMTracker')

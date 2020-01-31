@@ -25,3 +25,5 @@ WebUI.verifyElementText(findTestObject('UI Testing and Verification/Login page/S
 
 WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Login page/Span_Forget_password'))
 
+WebUI.verifyElementClickable(findTestObject('Page_TRMTracker Login/button_Login'))
+

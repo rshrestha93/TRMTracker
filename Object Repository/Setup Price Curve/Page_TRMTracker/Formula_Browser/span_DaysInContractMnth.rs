@@ -6,15 +6,15 @@
    <elementGuidId>4410b3cf-917e-467b-a29e-5c679e40a4e6</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//span[(text() = 'DaysInContractMnth' or . = 'DaysInContractMnth') and @ref_element = 'Object Repository/Setup Price Curve/Page_TRMTracker/Formula_Browser/iframe (1)']</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>(.//*[normalize-space(text()) and normalize-space(.)='Date Time'])[1]/following::span[2]</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//span[(text() = 'DaysInContractMnth' or . = 'DaysInContractMnth') and @ref_element = 'Object Repository/Setup Price Curve/Page_TRMTracker/Formula_Browser/iframe (1)']</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

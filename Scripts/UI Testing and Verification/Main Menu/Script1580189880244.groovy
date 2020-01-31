@@ -15,7 +15,35 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('User Login/ValidLogin'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.switchToWindowTitle('TRMTracker')
+WebUI.verifyElementVisible(findTestObject('Report manager/Page_TRMTracker/Title'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementClickable(findTestObject(null))
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Hamburger Menu'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Search-minus'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/History'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Star'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Pie-chart'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Refresh'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Tiles Windows'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Search'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Calendar'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Warning-Alert'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Envelope'))
+
+WebUI.waitForElementVisible(findTestObject('UI Testing and Verification/Main Menu/img'), 30)
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/span_Ronish  Shrestha'))
+
+WebUI.click(findTestObject('UI Testing and Verification/Main Menu/span_Ronish  Shrestha'))
+
+WebUI.verifyElementClickable(findTestObject('UI Testing and Verification/Main Menu/Power-off'))
 
